@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Đăng Ký Workshop của Rárt</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background: url('https://anandzcreation.files.wordpress.com/2011/11/recycling-rules.jpg') no-repeat center center fixed;
+            background-size: cover;
+            color: #1E5631; /* Màu xanh lá cây đậm */
+        }
+        header {
+            background-color: #fff; /* Màu trắng */
+            padding: 10px; /* Thu nhỏ chiều cao header */
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+        }
+        header .logo-container {
+            display: flex;
+            align-items: center;
+            flex: 1; /* Đẩy logo sang bên trái */
+        }
+        header img {
+            height: 50px; /* Thu nhỏ logo */
+            margin-right: 10px; /* Thêm khoảng cách giữa logo và text */
+        }
+        header nav {
+            display: flex;
+            gap: 15px; /* Thu nhỏ khoảng cách giữa các liên kết */
+            flex: 2; /* Đẩy navigation sang bên phải */
+            justify-content: flex-end;
+        }
+        header nav a {
+            color: #1E5631; /* Màu xanh lá cây đậm */
+            text-decoration: none;
+            font-weight: bold;
+            font-size: 16px; /* Giảm kích thước chữ */
+            transition: color 0.3s;
+        }
+        header nav a:hover {
+            color: #A7C957; /* Màu xanh lá cây nhạt */
+        }
+        .container {
+            background-color: rgba(30, 86, 49, 0.9); /* Xanh lá cây đậm */
+            padding: 20px 30px;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(167, 201, 87, 0.3); /* Xanh lá cây nhạt */
+            max-width: 600px;
+            margin: 80px auto 20px auto;
+            color: #fff; /* Chữ trắng */
+        }
+        h2 {
+            text-align: center;
+            color: #A7C957; /* Xanh lá cây nhạt */
+        }
+        form {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 15px;
+        }
+        form label {
+            font-weight: bold;
+        }
+        form input, form textarea, form button {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #A7C957;
+            border-radius: 5px;
+            background-color: #222;
+            color: #A7C957;
+        }
+        form button {
+            background-color: #A7C957;
+            color: #000;
+        }
+        form button:hover {
+            background-color: #B7E57F;
+        }
+        .gallery {
+            margin: 20px auto;
+            padding: 20px;
+            background-color: rgba(30, 86, 49, 0.9); /* Xanh lá cây đậm */
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(167, 201, 87, 0.3); /* Xanh lá cây nhạt */
+            max-width: 800px;
+            text-align: center;
+            color: #fff;
+        }
+        .gallery img {
+            width: 100%;
+            max-width: 400px;
+            margin: 20px auto;
+            border-radius: 8px;
+            border: 2px solid #A7C957;
+        }
+        footer {
+            background-color: rgba(30, 86, 49, 0.9);
+            color: #A7C957;
+            padding: 20px;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+
+<!-- Header -->
+<header>
+    <div class="logo-container">
+        <a href="https://ibb.co/RDYwHYN">
+            <img src="https://i.ibb.co/LZY7pYr/Trash-to-Art-1.png" alt="Trash-to-Art-1" border="0">
+        </a>
+        <span style="color: #1E5631; font-size: 18px; font-weight: bold;">Rárt</span>
+    </div>
+    <nav>
+        <a href="#workshop">Đăng ký Workshop</a>
+        <a href="#about">Thư viện hình ảnh</a>
+        <a href="#contact">Về chúng tôi</a>
+    </nav>
+</header>
+
+<!-- Đăng ký Workshop -->
+<div id="workshop" class="container">
+    <h2>Đăng Ký Workshop</h2>
+    <form action="submit_form.php" method="POST">
+        <label for="name">Họ và Tên:</label>
+        <input type="text" id="name" name="name" placeholder="Nhập họ và tên" required>
+        
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" placeholder="Nhập địa chỉ email" required>
+        
+        <label for="phone">Số điện thoại:</label>
+        <input type="tel" id="phone" name="phone" placeholder="Nhập số điện thoại" required>
+        
+        <label for="time">Chọn thời gian tham gia:</label>
+        <input type="datetime-local" id="time" name="time" required>
+        
+        <label for="message">Ghi chú (Tùy chọn):</label>
+        <textarea id="message" name="message" rows="4" placeholder="Nhập ghi chú nếu có"></textarea>
+        
+        <button type="submit">Đăng Ký Ngay</button>
+    </form>
+</div>
+
+<!-- Giới thiệu -->
+<div id="about" class="gallery">
+    <h3>Gallery - Đồ Dùng Tái Chế</h3>
+    <img src="https://i.ytimg.com/vi/YZfvD1FRsDs/hqdefault.jpg?v=615fc3f5" alt="Sản phẩm tái chế 1">
+    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRGri1SPzmbE0RcF2kcmesK3WQFqg4QuzsY0g&s" alt="Sản phẩm tái chế 2">
+</div>
+
+<!-- Liên hệ -->
+<div id="contact" class="container">
+    <h2>Liên Hệ Với Chúng Tôi</h2>
+    <p>DỰ ÁN <strong>RÁRT</strong></p>
+    <p>ĐỊA CHỈ LIÊN HỆ: <strong>336 Nguyễn Trãi, Thanh Xuân, Hà Nội</strong></p>
+    <p>Số điện thoại: <strong>(+84) 334089204</strong></p>
+</div>
+
+<!-- Footer -->
+<footer>
+    <p>&copy; 2024 Dự án <strong>Rárt</strong></p>
+    <p>
+        Theo dõi chúng tôi: 
+        <a href="https://facebook.com/Rart" target="_blank">Facebook</a> | 
+        <a href="https://instagram.com/Rart" target="_blank">Instagram</a> | 
+        <a href="https://tiktok.com/@Rart" target="_blank">TikTok</a>
+    </p>
+</footer>
+
+</body>
+</html>
